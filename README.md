@@ -1,56 +1,76 @@
-# Enterprise AI Automation Agent – WhatsApp + Shopify + Gemini AI
-Robust AI Automation backend built with **FastAPI**, **Google Gemini AI**, **Shopify API** and **WhatsApp Cloud API**. Designed for **real-world business automation** such as product recommendations, AI customer support, and ecommerce assistance.
+<!-- Banner -->
+<p align="center">
+  <img src="assets/banner.png" alt="Enterprise AI Automation Agent Banner" style="max-width: 100%;">
+</p>
 
-> **PT/BR abaixo**
+# Enterprise AI Automation Agent – WhatsApp + Shopify + Google Gemini AI
+**AI automation backend integrating WhatsApp + Shopify + Google Gemini AI for ecommerce automation, product assistance and intelligent conversations.**  
 
-[![Python](https://img.shields.io/badge/Python-3.11+-blue)](https://www.python.org/)
-[![FastAPI](https://img.shields.io/badge/FastAPI-💚-brightgreen)](https://fastapi.tiangolo.com/)
-[![Gemini](https://img.shields.io/badge/Google%20AI-Gemini-black)](https://ai.google.dev/)
-
-Production-style AI automation agent integrating **WhatsApp** and **Shopify** for sales & support. Built with **FastAPI**.  
-Ready for RAG, memory and Slack notifications.
-
----
-
-## ✅ Features
-- 🤖 AI Text Automation using **Google Gemini AI**
-- 💬 **WhatsApp Cloud API** integration (webhook inbound/outbound messages)
-- 🛒 Shopify **product search** & catalog automation
-- 🔄 Fallback Strategy: **Shopify Search → AI answer**
-- 🧠 Context-ready for future **Memory / Actions / RAG**
-- 🧱 Clean FastAPI **service architecture**
-- 🔥 **Production-ready foundation**
+![Status](https://img.shields.io/badge/status-active-success)
+![Python](https://img.shields.io/badge/python-3.11+-blue)
+![FastAPI](https://img.shields.io/badge/FastAPI-Ready-brightgreen)
+![Gemini AI](https://img.shields.io/badge/Google%20Gemini-Integrated-black)
+![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20Linux-blue)
+![License](https://img.shields.io/badge/license-MIT-purple)
 
 ---
 
-## 🏗️ Architecture Overview
-´´´
-FastAPI
-├─ /ai/ask → Gemini AI smart replies
-├─ /ai/models → List allowed Gemini models
-├─ /webhook/whatsapp → WhatsApp integration
-├─ /catalog/products → Shopify catalog
-├─ services/ → ai, shopify, whatsapp modules
-├─ utils/ → logger helper
-└─ config/ → environment settings
-´´´
+## ✅ Feature Overview
+| Feature | Status | Description |
+|----------|--------|-------------|
+| AI Reply Engine (Gemini) | ✅ Done | Smart responses powered by Google Gemini |
+| WhatsApp Integration | ✅ Done | Webhook + AI replies |
+| Shopify Integration | ✅ Done | Product search by title |
+| Error-safe AI Engine | ✅ Done | Timeout + fallback + model validation |
+| REST API Docs | ✅ Done | Swagger ready |
+| Slack Notifications | 🔜 Next | Team alerts from automation |
+| AI Memory (/ai/messages) | 🔜 Next | Conversation history |
+| Ecommerce AI Assistant | 🔜 Next | Smart product advisor |
+| RAG for Knowledge Base | 🔜 Planned | Load product FAQ / docs |
+| Dashboard UI | 🔜 Planned | Manage flows visually |
 
 ---
 
+## ⚙️ Tech Stack
+| Area | Technology |
+|------|------------|
+| Language | Python 3.11 |
+| Framework | FastAPI |
+| AI Provider | Google Gemini |
+| Ecommerce | Shopify API |
+| Messaging | WhatsApp Cloud API |
+| HTTP Client | httpx |
+| ASGI Server | uvicorn |
+| Env | python-dotenv |
 
 ---
 
-## ⚙️ Requirements
-- Python **3.11+**
-- Google Gemini API Key → https://aistudio.google.com
-- Shopify Store + Private Admin API Key
-- WhatsApp Cloud API (Meta Developers)
+## 🔧 How It Works (Flow)
+```text
+User (WhatsApp) → Webhook → Check Shopify Products
+           ↳ Found → Product response to user
+           ↳ Not Found → Ask Gemini AI → Smart reply to WhatsApp
+
 
 ---
 
-## 🔐 Environment Setup (.env)
-Create a `.env` file in the root folder:
-```ini
+🚀 Local Setup
+
+
+git clone https://github.com/NeusaM21/enterprise-ai-automation-agent.git
+cd enterprise-ai-automation-agent
+python -m venv .venv
+& .\.venv\Scripts\Activate.ps1
+pip install -r requirements.txt
+
+
+---
+
+🔐 Environment (.env)
+
+Create a .env file:
+
+
 ENV=dev
 HOST=127.0.0.1
 PORT=8000
@@ -68,157 +88,161 @@ WHATSAPP_PHONE_ID=your_whatsapp_phone_id
 
 ---
 
-🚀 Run the Project Locally
-Option A – Quick Start (recommended)
+▶️ Run Server
 
-./run.ps1
-
----
-
-Option B – Manual
-
-python -m venv .venv
-& .\.venv\Scripts\Activate.ps1
-pip install -r requirements.txt
 uvicorn app.main:app --host 127.0.0.1 --port 8000 --reload
 
-Swagger UI: http://127.0.0.1:8000/docs
+Swagger Docs → http://127.0.0.1:8000/docs
 
-API JSON: http://127.0.0.1:8000/openapi.json
 
 ---
 
-✅ Canonical API Tests (PowerShell)
+⚡ Canonical API Tests (PowerShell)
 
-⚠️ Before running tests, confirm the server is running.
-If not:
+📢 Antes de testar, confirme se o servidor FastAPI está rodando!
+Se não estiver:
 
-Stop any old server → CTRL + C
+Pressione CTRL + C para parar servidor antigo
 
-Activate venv → & .\.venv\Scripts\Activate.ps1
+Ative a venv: & .\.venv\Scripts\Activate.ps1
 
-Start → ./run.ps1
+Inicie com: ./run.ps1
 
-
-Health check
+✅ Testes:
 
 Invoke-RestMethod -Method Get -Uri "http://127.0.0.1:8000/health"
-
----
-
-List available AI models
-
 Invoke-RestMethod -Method Get -Uri "http://127.0.0.1:8000/ai/models"
-
----
-
-Send AI message (Gemini)
-
-$body = @{ text = "Say a fun fact about AI in one line." } | ConvertTo-Json
+$body = @{ text = "Hello Gemini, how are you?" } | ConvertTo-Json
 Invoke-RestMethod -Method Post -Uri "http://127.0.0.1:8000/ai/ask" -ContentType "application/json" -Body $body
 
 
 ---
 
-✅ Expected /ai/ask response:
-
+✅ Expected Response:
 
 {
   "model": "models/gemini-2.5-flash",
   "fallback": false,
-  "latency_ms": 185,
-  "reply": "Artificial intelligence doesn't sleep—but it may dream in algorithms!"
+  "latency_ms": 210,
+  "reply": "Hi! I'm great and ready to help! 😊"
 }
 
 
 ---
 
-📡 WhatsApp Webhook (Cloud API)
-Verify webhook
+🔥 Demo (Terminal)
 
-GET /webhook/whatsapp?hub.mode=subscribe&hub.verify_token=YOUR_TOKEN&hub.challenge=123456
+curl -X POST http://127.0.0.1:8000/ai/ask \
+  -H "Content-Type: application/json" \
+  -d "{\"text\":\"Say one fun fact about AI\"}"
 
-
-Receive incoming WhatsApp messages
-
-Tries Shopify product match first
-
-Falls back to AI if no match
-
-Sends reply automatically
 
 ---
 
-🛒 Shopify Integration
+🛒 Shopify Example
 
-GET /catalog/products?limit=5
+GET http://127.0.0.1:8000/catalog/products?limit=5
+
 
 ---
 
-✅ Development Quality
+💬 WhatsApp Webhook
 
-.editorconfig → code formatting
+GET /webhook/whatsapp?hub.mode=subscribe&hub.verify_token=YOUR_TOKEN&hub.challenge=1234
 
-.gitattributes → avoid CRLF/LF issues
 
-utils/logger.py → structured logs
+Receive:
 
-.env.example → clean setup
-
-run.ps1 → easy local execution
+POST /webhook/whatsapp
 
 ---
 
 
-📦 Project Roadmap
-Feature	Status
-WhatsApp + Gemini AI Base	✅ Done
-Shopify Catalog Search	✅ Done
-/ai/ask fallback + timeout	✅ Done
-README Professional (EN/PT)	✅ Done
-Slack Notifications	🔜 Next
-AI Chat Memory (/ai/messages)	🔜 Next
-Product Recommendation AI	🔜 Planned
-RAG for FAQ Knowledge Base	🔜 Planned
-Web Dashboard	🔜 Planned
+## 📂 Project Structure (Clean Architecture Ready)
+
+```plaintext
+This project follows a modular and scalable architecture to support future extensions such as conversation memory, Slack actions, RAG knowledge base, and persistent storage. The structure is clean and organized to make maintenance easy.
+
+Este projeto segue uma arquitetura modular e escalável, preparada para receber expansões futuras como memória conversacional, ações via Slack, RAG para base de conhecimento e persistência de dados. A organização facilita manutenção e evolução.
+
+```plaintext
+enterprise-ai-automation-agent
+├─ app/
+│  ├─ main.py                # FastAPI app and route definitions / App FastAPI e rotas
+│  ├─ services/              # External integrations: AI, Shopify, WhatsApp / Integrações externas
+│  ├─ utils/                 # Logger and shared helpers / Utilitários e logger
+│  ├─ config/                # Environment and global settings / Configuração e variáveis de ambiente
+│
+├─ tests/                    # Automated tests / Testes automatizados
+│
+├─ assets/                   # Static project assets (images/banners) / Arquivos estáticos do projeto
+│  └─ banner.png             # Project cover image used in README / Imagem de capa
+│
+├─ run.ps1                   # Local startup script for Windows PowerShell
+├─ requirements.txt          # Python dependencies
+└─ README.md                 # Project documentation
+
+```
 
 ---
 
 🛠️ Troubleshooting
-Issue	Solution
-Connection refused	Run API with ./run.ps1
-Model not found	Check /ai/models and update AI_MODEL
-Timeout error	Increase timeout_ms in /ai/ask
-AI provider error (502)	Check GEMINI_API_KEY
-CRLF warnings	Already fixed by .gitattributes
+Issue	Fix
+Connection refused	Start server: ./run.ps1
+Model not found	Check /ai/models and .env
+Timeout	Add timeout_ms to /ai/ask body
+AI error 502	Check GEMINI_API_KEY
+CRLF/LF warning	Already fixed with .gitattributes
+
+---
+
+🌍 Links Oficiais
+
+Gemini AI Docs → https://ai.google.dev
+
+WhatsApp API → https://developers.facebook.com
+
+Shopify API → https://shopify.dev
+
+---
+
+🇧🇷 Visão Geral (Português)
+
+Este projeto é um agente de automação com IA para e-commerce. Ele integra:
+✅ WhatsApp (atendimento automático)
+✅ Shopify (busca de produtos)
+✅ IA (Gemini) para respostas inteligentes
+
+Use para criar automações reais de suporte, vendas e chat com IA.
+
+---
+
+🧭 Roadmap
+
+Slack alerts ✅ soon
+
+AI conversation memory
+
+RAG for store FAQ
+
+Product recommendations
+
+Web dashboard
 
 ---
 
 👩‍💻 Author
 
-Built by Neusa Magalhães – AI Automation Engineer
-🔗 GitHub: https://github.com/NeusaM21
+Developed by Neusa M. – AI Automation Engineer
+
+📩 Email: contact.neusam21@gmail.com
+
+🌐 GitHub: https://github.com/NeusaM21
 
 🔗 LinkedIn: https://linkedin.com/in/neusam21dev
-
-📩 contact.neusam21@gmail.com
-
----
-
-🇧🇷 Visão Geral em Português
-
-Backend profissional de automação com IA integrado com WhatsApp + Shopify + Gemini AI. Ideal para criar chatbots inteligentes, assistentes de vendas automáticos e IA aplicada a e-commerce. Possui arquitetura limpa, pronta para crescer com banco de dados, memória conversacional, painéis web e integrações com APIs.
 
 ---
 
 📄 License
 
-MIT License – Free for personal and commercial use.
-
----
-
-🔥 Contributions and suggestions are welcome!
-
-
-
-
+MIT License – free for commercial and academic use.
