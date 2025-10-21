@@ -13,29 +13,29 @@
 ![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20Linux-blue)
 ![License](https://img.shields.io/badge/license-MIT-purple)
 
-<hr style="border: 0.5px solid #e5e5e5; margin: 20px 0;">
+<hr style="border: 0.5px solid #e5e5e5; margin: 20px 0">
 
 ## 📑 Table of Contents
-- [✅ Feature Overview](#-feature-overview)
-- [⚙️ Tech Stack](#️-tech-stack)
-- [🔧 How It Works (Flow)](#-how-it-works-flow)
-- [🚀 Local Setup](#-local-setup)
-- [🔐 Environment (.env)](#-environment-env)
-- [▶️ Run Server](#️-run-server)
-- [⚡ Canonical API Tests (PowerShell)](#-canonical-api-tests-powershell)
-- [✅ Expected Response](#-expected-response)
-- [🔥 Demo (Terminal)](#-demo-terminal)
-- [🛒 Shopify Example](#-shopify-example)
-- [💬 WhatsApp Webhook](#-whatsapp-webhook)
-- [📂 Project Structure (Clean Architecture Ready)](#-project-structure-clean-architecture-ready)
-- [🛠️ Troubleshooting](#️-troubleshooting)
-- [🌍 Links Oficiais](#-links-oficiais)
-- [🇧🇷 Visão Geral (Português)](#-visão-geral-português)
-- [🧭 Roadmap](#-roadmap)
-- [👩‍💻 Author](#-author)
-- [📄 License](#-license)
+- [✅ Feature Overview](#feature-overview)
+- [⚙️ Tech Stack](#tech-stack)
+- [🔧 How It Works](#how-it-works)
+- [🚀 Local Setup](#local-setup)
+- [🔐 Environment (.env)](#environment-env)
+- [▶️ Run Server](#run-server)
+- [⚡ Canonical API Tests (PowerShell)](#canonical-api-tests-powershell)
+- [✅ Expected Response](#expected-response)
+- [🔥 Demo (Terminal)](#demo-terminal)
+- [🛒 Shopify Example](#shopify-example)
+- [💬 WhatsApp Webhook](#whatsapp-webhook)
+- [📂 Project Structure (Clean Architecture Ready)](#project-structure-clean-architecture-ready)
+- [🛠️ Troubleshooting](#troubleshooting)
+- [🌍 Links Oficiais](#links-oficiais)
+- [🇧🇷 Visão Geral (Português)](#visão-geral-português)
+- [🧭 Roadmap](#roadmap)
+- [👩‍💻 Author](#author)
+- [📄 License](#license)
 
-<hr style="border: 0.5px solid #e5e5e5; margin: 20px 0;">
+<hr style="border: 0.5px solid #e5e5e5; margin: 20px 0">
 
 ## ✅ Feature Overview
 | Feature | Status | Description |
@@ -51,7 +51,7 @@
 | RAG for Knowledge Base | 🔜 Planned | Load product FAQ / docs |
 | Dashboard UI | 🔜 Planned | Manage flows visually |
 
-<hr style="border: 0.5px solid #e5e5e5; margin: 20px 0;">
+<hr style="border: 0.5px solid #e5e5e5; margin: 20px 0">
 
 ## ⚙️ Tech Stack
 | Area | Technology |
@@ -65,27 +65,32 @@
 | ASGI Server | uvicorn |
 | Env | python-dotenv |
 
-<hr style="border: 0.5px solid #e5e5e5; margin: 20px 0;">
+<hr style="border: 0.5px solid #e5e5e5; margin: 20px 0">
 
-## 🔧 How It Works (Flow)
-```text
-User (WhatsApp) → Webhook → Check Shopify Products
-           ↳ Found → Product response to user
-           ↳ Not Found → Ask Gemini AI → Smart reply to WhatsApp
+## 🔧 How It Works
+User (WhatsApp) → Webhook → Check Shopify Products  
+↳ Found → Product response to user  
+↳ Not Found → Ask Gemini AI → Smart reply to WhatsApp  
 
+<hr style="border: 0.5px solid #e5e5e5; margin: 20px 0">
 
-<hr style="border: 0.5px solid #e5e5e5; margin: 20px 0;">
+## 🚀 Local Setup
+1. Clone o repositório:  
+`git clone https://github.com/NeusaM21/enterprise-ai-automation-agent.git`  
+2. Acesse a pasta do projeto:  
+`cd enterprise-ai-automation-agent`  
+3. Crie o ambiente virtual:  
+`python -m venv .venv`  
+4. Ative no PowerShell:  
+`& .\.venv\Scripts\Activate.ps1`  
+5. Instale dependências:  
+`pip install -r requirements.txt`  
 
-🚀 Local Setup
-git clone https://github.com/NeusaM21/enterprise-ai-automation-agent.git
-cd enterprise-ai-automation-agent
-python -m venv .venv
-& .\.venv\Scripts\Activate.ps1
-pip install -r requirements.txt
+<hr style="border: 0.5px solid #e5e5e5; margin: 20px 0">
 
-<hr style="border: 0.5px solid #e5e5e5; margin: 20px 0;">
+## 🔐 Environment (.env)
 
-🔐 Environment (.env)
+Crie um arquivo `.env` na raiz do projeto com:  
 
 Create a .env file:
 
@@ -105,36 +110,34 @@ WHATSAPP_TOKEN=your_meta_whatsapp_token
 WHATSAPP_VERIFY_TOKEN=your_webhook_verify_token
 WHATSAPP_PHONE_ID=your_whatsapp_phone_id
 
-<hr style="border: 0.5px solid #e5e5e5; margin: 20px 0;">
 
-▶️ Run Server
+<hr style="border: 0.5px solid #e5e5e5; margin: 20px 0">
 
-uvicorn app.main:app --host 127.0.0.1 --port 8000 --reload
+## ▶️ Run Server
+Execute o servidor local:  
+`uvicorn app.main:app --host 127.0.0.1 --port 8000 --reload`  
+Acesse a documentação Swagger:  
+[http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
 
-Swagger Docs → http://127.0.0.1:8000/docs
+<hr style="border: 0.5px solid #e5e5e5; margin: 20px 0">
 
-
-<hr style="border: 0.5px solid #e5e5e5; margin: 20px 0;">
-
-⚡ Canonical API Tests (PowerShell)
-
-📢 Antes de testar, confirme se o servidor FastAPI está rodando!
+## ⚡ Canonical API Tests (PowerShell)
+Antes de testar, confirme se o servidor FastAPI está rodando!  
 Se não estiver:
+- Pressione **CTRL + C** para parar o servidor antigo.  
+- Ative a venv: `& .\.venv\Scripts\Activate.ps1`  
+- Inicie com: `./run.ps1`  
 
-Pressione CTRL + C para parar servidor antigo
-
-Ative a venv: & .\.venv\Scripts\Activate.ps1
-
-Inicie com: ./run.ps1
-
-✅ Testes:
+Testes:
 
 Invoke-RestMethod -Method Get -Uri "http://127.0.0.1:8000/health"
 Invoke-RestMethod -Method Get -Uri "http://127.0.0.1:8000/ai/models"
 $body = @{ text = "Hello Gemini, how are you?" } | ConvertTo-Json
 Invoke-RestMethod -Method Post -Uri "http://127.0.0.1:8000/ai/ask" -ContentType "application/json" -Body $body
 
+
 <hr style="border: 0.5px solid #e5e5e5; margin: 20px 0;">
+
 
 ✅ Expected Response:
 
@@ -145,7 +148,9 @@ Invoke-RestMethod -Method Post -Uri "http://127.0.0.1:8000/ai/ask" -ContentType 
   "reply": "Hi! I'm great and ready to help! 😊"
 }
 
+
 <hr style="border: 0.5px solid #e5e5e5; margin: 20px 0;">
+
 
 🔥 Demo (Terminal)
 
@@ -164,6 +169,7 @@ GET http://127.0.0.1:8000/catalog/products?limit=5
 
 <hr style="border: 0.5px solid #e5e5e5; margin: 20px 0;">
 
+
 💬 WhatsApp Webhook
 
 GET /webhook/whatsapp?hub.mode=subscribe&hub.verify_token=YOUR_TOKEN&hub.challenge=1234
@@ -172,6 +178,7 @@ GET /webhook/whatsapp?hub.mode=subscribe&hub.verify_token=YOUR_TOKEN&hub.challen
 Receive:
 
 POST /webhook/whatsapp
+
 
 <hr style="border: 0.5px solid #e5e5e5; margin: 20px 0;">
 
@@ -202,7 +209,9 @@ enterprise-ai-automation-agent
 
 ```
 
+
 <hr style="border: 0.5px solid #e5e5e5; margin: 20px 0;">
+
 
 🛠️ Troubleshooting
 Issue	Fix
@@ -214,6 +223,7 @@ CRLF/LF warning	Already fixed with .gitattributes
 
 <hr style="border: 0.5px solid #e5e5e5; margin: 20px 0;">
 
+
 🌍 Links Oficiais
 
 Gemini AI Docs → https://ai.google.dev
@@ -222,7 +232,9 @@ WhatsApp API → https://developers.facebook.com
 
 Shopify API → https://shopify.dev
 
+
 <hr style="border: 0.5px solid #e5e5e5; margin: 20px 0;">
+
 
 🇧🇷 Visão Geral (Português)
 
@@ -233,7 +245,9 @@ Este projeto é um agente de automação com IA para e-commerce. Ele integra:
 
 Use para criar automações reais de suporte, vendas e chat com IA.
 
+
 <hr style="border: 0.5px solid #e5e5e5; margin: 20px 0;">
+
 
 🧭 Roadmap
 
@@ -247,7 +261,9 @@ Product recommendations
 
 Web dashboard
 
+
 <hr style="border: 0.5px solid #e5e5e5; margin: 20px 0;">
+
 
 👩‍💻 Author
 
@@ -259,7 +275,9 @@ Developed by Neusa M. – AI Automation Engineer
 
 🔗 LinkedIn: https://linkedin.com/in/neusam21dev
 
+
 <hr style="border: 0.5px solid #e5e5e5; margin: 20px 0;">
+
 
 📄 License
 
