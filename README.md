@@ -13,7 +13,29 @@
 ![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20Linux-blue)
 ![License](https://img.shields.io/badge/license-MIT-purple)
 
----
+<hr style="border: 0.5px solid #e5e5e5; margin: 20px 0;">
+
+## 📑 Table of Contents
+- [✅ Feature Overview](#-feature-overview)
+- [⚙️ Tech Stack](#️-tech-stack)
+- [🔧 How It Works (Flow)](#-how-it-works-flow)
+- [🚀 Local Setup](#-local-setup)
+- [🔐 Environment (.env)](#-environment-env)
+- [▶️ Run Server](#️-run-server)
+- [⚡ Canonical API Tests (PowerShell)](#-canonical-api-tests-powershell)
+- [✅ Expected Response](#-expected-response)
+- [🔥 Demo (Terminal)](#-demo-terminal)
+- [🛒 Shopify Example](#-shopify-example)
+- [💬 WhatsApp Webhook](#-whatsapp-webhook)
+- [📂 Project Structure (Clean Architecture Ready)](#-project-structure-clean-architecture-ready)
+- [🛠️ Troubleshooting](#️-troubleshooting)
+- [🌍 Links Oficiais](#-links-oficiais)
+- [🇧🇷 Visão Geral (Português)](#-visão-geral-português)
+- [🧭 Roadmap](#-roadmap)
+- [👩‍💻 Author](#-author)
+- [📄 License](#-license)
+
+<hr style="border: 0.5px solid #e5e5e5; margin: 20px 0;">
 
 ## ✅ Feature Overview
 | Feature | Status | Description |
@@ -29,11 +51,11 @@
 | RAG for Knowledge Base | 🔜 Planned | Load product FAQ / docs |
 | Dashboard UI | 🔜 Planned | Manage flows visually |
 
----
+<hr style="border: 0.5px solid #e5e5e5; margin: 20px 0;">
 
 ## ⚙️ Tech Stack
 | Area | Technology |
-|------|------------|
+|------|-------------|
 | Language | Python 3.11 |
 | Framework | FastAPI |
 | AI Provider | Google Gemini |
@@ -43,7 +65,7 @@
 | ASGI Server | uvicorn |
 | Env | python-dotenv |
 
----
+<hr style="border: 0.5px solid #e5e5e5; margin: 20px 0;">
 
 ## 🔧 How It Works (Flow)
 ```text
@@ -52,19 +74,16 @@ User (WhatsApp) → Webhook → Check Shopify Products
            ↳ Not Found → Ask Gemini AI → Smart reply to WhatsApp
 
 
----
+<hr style="border: 0.5px solid #e5e5e5; margin: 20px 0;">
 
 🚀 Local Setup
-
-
 git clone https://github.com/NeusaM21/enterprise-ai-automation-agent.git
 cd enterprise-ai-automation-agent
 python -m venv .venv
 & .\.venv\Scripts\Activate.ps1
 pip install -r requirements.txt
 
-
----
+<hr style="border: 0.5px solid #e5e5e5; margin: 20px 0;">
 
 🔐 Environment (.env)
 
@@ -76,7 +95,7 @@ HOST=127.0.0.1
 PORT=8000
 
 GEMINI_API_KEY=YOUR_GEMINI_KEY
-AI_MODEL=models/gemini-2.5-flash
+AI_MODEL=models/gemini-2.0-flash-001
 
 SHOPIFY_API_KEY=your_key
 SHOPIFY_PASSWORD=your_password
@@ -86,7 +105,7 @@ WHATSAPP_TOKEN=your_meta_whatsapp_token
 WHATSAPP_VERIFY_TOKEN=your_webhook_verify_token
 WHATSAPP_PHONE_ID=your_whatsapp_phone_id
 
----
+<hr style="border: 0.5px solid #e5e5e5; margin: 20px 0;">
 
 ▶️ Run Server
 
@@ -95,7 +114,7 @@ uvicorn app.main:app --host 127.0.0.1 --port 8000 --reload
 Swagger Docs → http://127.0.0.1:8000/docs
 
 
----
+<hr style="border: 0.5px solid #e5e5e5; margin: 20px 0;">
 
 ⚡ Canonical API Tests (PowerShell)
 
@@ -115,8 +134,7 @@ Invoke-RestMethod -Method Get -Uri "http://127.0.0.1:8000/ai/models"
 $body = @{ text = "Hello Gemini, how are you?" } | ConvertTo-Json
 Invoke-RestMethod -Method Post -Uri "http://127.0.0.1:8000/ai/ask" -ContentType "application/json" -Body $body
 
-
----
+<hr style="border: 0.5px solid #e5e5e5; margin: 20px 0;">
 
 ✅ Expected Response:
 
@@ -127,8 +145,7 @@ Invoke-RestMethod -Method Post -Uri "http://127.0.0.1:8000/ai/ask" -ContentType 
   "reply": "Hi! I'm great and ready to help! 😊"
 }
 
-
----
+<hr style="border: 0.5px solid #e5e5e5; margin: 20px 0;">
 
 🔥 Demo (Terminal)
 
@@ -137,14 +154,15 @@ curl -X POST http://127.0.0.1:8000/ai/ask \
   -d "{\"text\":\"Say one fun fact about AI\"}"
 
 
----
+<hr style="border: 0.5px solid #e5e5e5; margin: 20px 0;">
+
 
 🛒 Shopify Example
 
 GET http://127.0.0.1:8000/catalog/products?limit=5
 
 
----
+<hr style="border: 0.5px solid #e5e5e5; margin: 20px 0;">
 
 💬 WhatsApp Webhook
 
@@ -155,7 +173,7 @@ Receive:
 
 POST /webhook/whatsapp
 
----
+<hr style="border: 0.5px solid #e5e5e5; margin: 20px 0;">
 
 
 ## 📂 Project Structure (Clean Architecture Ready)
@@ -184,7 +202,7 @@ enterprise-ai-automation-agent
 
 ```
 
----
+<hr style="border: 0.5px solid #e5e5e5; margin: 20px 0;">
 
 🛠️ Troubleshooting
 Issue	Fix
@@ -194,7 +212,7 @@ Timeout	Add timeout_ms to /ai/ask body
 AI error 502	Check GEMINI_API_KEY
 CRLF/LF warning	Already fixed with .gitattributes
 
----
+<hr style="border: 0.5px solid #e5e5e5; margin: 20px 0;">
 
 🌍 Links Oficiais
 
@@ -204,7 +222,7 @@ WhatsApp API → https://developers.facebook.com
 
 Shopify API → https://shopify.dev
 
----
+<hr style="border: 0.5px solid #e5e5e5; margin: 20px 0;">
 
 🇧🇷 Visão Geral (Português)
 
@@ -215,7 +233,7 @@ Este projeto é um agente de automação com IA para e-commerce. Ele integra:
 
 Use para criar automações reais de suporte, vendas e chat com IA.
 
----
+<hr style="border: 0.5px solid #e5e5e5; margin: 20px 0;">
 
 🧭 Roadmap
 
@@ -229,7 +247,7 @@ Product recommendations
 
 Web dashboard
 
----
+<hr style="border: 0.5px solid #e5e5e5; margin: 20px 0;">
 
 👩‍💻 Author
 
@@ -241,7 +259,7 @@ Developed by Neusa M. – AI Automation Engineer
 
 🔗 LinkedIn: https://linkedin.com/in/neusam21dev
 
----
+<hr style="border: 0.5px solid #e5e5e5; margin: 20px 0;">
 
 📄 License
 
