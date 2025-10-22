@@ -27,7 +27,7 @@
 - [🔥 Demo (Terminal)](#demo-terminal)
 - [🛒 Shopify Example](#shopify-example)
 - [💬 WhatsApp Webhook](#whatsapp-webhook)
-- [📂 Project Structure (Clean Architecture Ready)](#project-structure-clean-architecture-ready)
+- [📂 Project Structure](#project-structure)
 - [🛠️ Troubleshooting](#troubleshooting)
 - [🌍 Links Oficiais](#links-oficiais)
 - [🇧🇷 Visão Geral (Português)](#visão-geral-português)
@@ -37,6 +37,7 @@
 
 <hr style="border: 0.5px solid #e5e5e5; margin: 20px 0">
 
+<a id="feature-overview"></a>
 ## ✅ Feature Overview
 | Feature | Status | Description |
 |----------|--------|-------------|
@@ -53,6 +54,7 @@
 
 <hr style="border: 0.5px solid #e5e5e5; margin: 20px 0">
 
+<a id="tech-stack"></a>
 ## ⚙️ Tech Stack
 | Area | Technology |
 |------|-------------|
@@ -67,6 +69,7 @@
 
 <hr style="border: 0.5px solid #e5e5e5; margin: 20px 0">
 
+<a id="how-it-works"></a>
 ## 🔧 How It Works
 User (WhatsApp) → Webhook → Check Shopify Products  
 ↳ Found → Product response to user  
@@ -74,6 +77,7 @@ User (WhatsApp) → Webhook → Check Shopify Products
 
 <hr style="border: 0.5px solid #e5e5e5; margin: 20px 0">
 
+<a id="local-setup"></a>
 ## 🚀 Local Setup
 1. Clone o repositório:  
 `git clone https://github.com/NeusaM21/enterprise-ai-automation-agent.git`  
@@ -88,6 +92,7 @@ User (WhatsApp) → Webhook → Check Shopify Products
 
 <hr style="border: 0.5px solid #e5e5e5; margin: 20px 0">
 
+<a id="environment-env"></a>
 ## 🔐 Environment (.env)
 
 Crie um arquivo `.env` na raiz do projeto com:  
@@ -113,6 +118,7 @@ WHATSAPP_PHONE_ID=your_whatsapp_phone_id
 
 <hr style="border: 0.5px solid #e5e5e5; margin: 20px 0">
 
+<a id="run-server"></a>
 ## ▶️ Run Server
 Execute o servidor local:  
 `uvicorn app.main:app --host 127.0.0.1 --port 8000 --reload`  
@@ -121,6 +127,7 @@ Acesse a documentação Swagger:
 
 <hr style="border: 0.5px solid #e5e5e5; margin: 20px 0">
 
+<a id="canonical-api-tests-powershell"></a>
 ## ⚡ Canonical API Tests (PowerShell)
 Antes de testar, confirme se o servidor FastAPI está rodando!  
 Se não estiver:
@@ -139,7 +146,8 @@ Invoke-RestMethod -Method Post -Uri "http://127.0.0.1:8000/ai/ask" -ContentType 
 <hr style="border: 0.5px solid #e5e5e5; margin: 20px 0;">
 
 
-✅ Expected Response:
+<a id="expected-response"></a>
+## ✅ Expected Response
 
 {
   "model": "models/gemini-2.5-flash",
@@ -152,7 +160,8 @@ Invoke-RestMethod -Method Post -Uri "http://127.0.0.1:8000/ai/ask" -ContentType 
 <hr style="border: 0.5px solid #e5e5e5; margin: 20px 0;">
 
 
-🔥 Demo (Terminal)
+<a id="demo-terminal"></a>
+## 🔥 Demo (Terminal)
 
 curl -X POST http://127.0.0.1:8000/ai/ask \
   -H "Content-Type: application/json" \
@@ -162,7 +171,8 @@ curl -X POST http://127.0.0.1:8000/ai/ask \
 <hr style="border: 0.5px solid #e5e5e5; margin: 20px 0;">
 
 
-🛒 Shopify Example
+<a id="shopify-example"></a>
+## 🛒 Shopify Example
 
 GET http://127.0.0.1:8000/catalog/products?limit=5
 
@@ -170,7 +180,8 @@ GET http://127.0.0.1:8000/catalog/products?limit=5
 <hr style="border: 0.5px solid #e5e5e5; margin: 20px 0;">
 
 
-💬 WhatsApp Webhook
+<a id="whatsapp-webhook"></a>
+## 💬 WhatsApp Webhook
 
 GET /webhook/whatsapp?hub.mode=subscribe&hub.verify_token=YOUR_TOKEN&hub.challenge=1234
 
@@ -183,6 +194,7 @@ POST /webhook/whatsapp
 <hr style="border: 0.5px solid #e5e5e5; margin: 20px 0;">
 
 
+<a id="project-structure"></a>
 ## 📂 Project Structure (Clean Architecture Ready)
 
 ```plaintext
@@ -213,7 +225,8 @@ enterprise-ai-automation-agent
 <hr style="border: 0.5px solid #e5e5e5; margin: 20px 0;">
 
 
-🛠️ Troubleshooting
+<a id="troubleshooting"></a>
+## 🛠️ Troubleshooting
 Issue	Fix
 Connection refused	Start server: ./run.ps1
 Model not found	Check /ai/models and .env
@@ -224,7 +237,8 @@ CRLF/LF warning	Already fixed with .gitattributes
 <hr style="border: 0.5px solid #e5e5e5; margin: 20px 0;">
 
 
-🌍 Links Oficiais
+<a id="links-oficiais"></a>
+## 🌍 Links Oficiais
 
 Gemini AI Docs → https://ai.google.dev
 
@@ -236,7 +250,8 @@ Shopify API → https://shopify.dev
 <hr style="border: 0.5px solid #e5e5e5; margin: 20px 0;">
 
 
-🇧🇷 Visão Geral (Português)
+<a id="visão-geral-português"></a>
+## 🇧🇷 Visão Geral (Português)
 
 Este projeto é um agente de automação com IA para e-commerce. Ele integra:
 ✅ WhatsApp (atendimento automático)
@@ -249,7 +264,8 @@ Use para criar automações reais de suporte, vendas e chat com IA.
 <hr style="border: 0.5px solid #e5e5e5; margin: 20px 0;">
 
 
-🧭 Roadmap
+<a id="roadmap"></a>
+## 🧭 Roadmap
 
 Slack alerts ✅ soon
 
@@ -265,7 +281,8 @@ Web dashboard
 <hr style="border: 0.5px solid #e5e5e5; margin: 20px 0;">
 
 
-👩‍💻 Author
+<a id="author"></a>
+## 👩‍💻 Author
 
 Developed by Neusa M. – AI Automation Engineer
 
@@ -279,6 +296,7 @@ Developed by Neusa M. – AI Automation Engineer
 <hr style="border: 0.5px solid #e5e5e5; margin: 20px 0;">
 
 
-📄 License
+<a id="license"></a>
+## 📄 License
 
 MIT License – free for commercial and academic use.
