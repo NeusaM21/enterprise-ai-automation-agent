@@ -290,7 +290,7 @@ Developed by Neusa M. – AI Automation Engineer
 
 🌐 GitHub: https://github.com/NeusaM21
 
-🔗 LinkedIn: https://linkedin.com/in/neusam21dev
+🔗 LinkedIn: www.linkedin.com/in/NeusaM21
 
 
 <hr style="border: 0.5px solid #e5e5e5; margin: 20px 0;">
