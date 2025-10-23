@@ -66,20 +66,20 @@
 | ASGI Server | uvicorn |
 | Environment | python-dotenv |
 
+
 <hr style="border: 0.5px solid #e5e5e5; margin: 20px 0">
-
-## ⚙️ How It Works
-
-**Flow logic:**
 
 
 <a id="how-it-works"></a>
+
 ## 🔧 How It Works
+
 User (WhatsApp) → Webhook → Check Shopify Products  
 ↳ Found → Product response to user  
-↳ Not Found → Ask Gemini AI → Smart reply to WhatsApp  
+↳ Not Found → Ask Gemini AI → Smart reply to WhatsApp
 
 <hr style="border: 0.5px solid #e5e5e5; margin: 20px 0">
+
 
 ## 💻 Local Setup
 
@@ -256,6 +256,8 @@ CRLF/LF warning	Fixed with .gitattributes
 
 <hr style="border: 0.5px solid #e5e5e5; margin: 20px 0;">
 
+<a id="common-errors-table">
+
 🧾 Common Errors Table
 
 Error	Possible Cause	Quick Fix
@@ -280,6 +282,9 @@ MIT License
 
 <hr style="border: 0.5px solid #e5e5e5; margin: 20px 0;">
 
+
+<a id="visão-geral-português">
+
 🇺🇸 Global Overview (English)
 
 This project is an AI-powered automation agent for ecommerce that connects:
@@ -296,7 +301,7 @@ You can automate customer service, sales flows, and smart chat responses using t
 <hr style="border: 0.5px solid #e5e5e5; margin: 20px 0">
 
 
-<a id="visão-geral-português"></a>
+<a id="visão-geral-português">
 
 🇧🇷 Visão Geral (Português)
 
@@ -349,10 +354,12 @@ Developed by Neusa M. — AI Automation Engineer
 
 <a id="license"></a>
 
-📜 License
+## 📜 License
 
-This project is licensed under the MIT License
- — free for commercial and academic use.
+This project is licensed under the [MIT License](LICENSE)  
+— free for commercial and academic use.
+
+<hr style="border: 0.5px solid #e5e5e5; margin: 20px 0">
 
 
 ---
