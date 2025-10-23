@@ -299,4 +299,14 @@ Developed by Neusa M. – AI Automation Engineer
 <a id="license"></a>
 ## 📄 License
 
-MIT License – free for commercial and academic use.
+This project is licensed under the [MIT License](LICENSE) — free for commercial and academic use.
+
+
+---
+
+
+<p align="left">
+  <a href="https://github.com/NeusaM21">
+    <img src="https://img.shields.io/badge/⬅️-Voltar%20para%20o%20portfólio%20principal-blue?style=for-the-badge"/>
+  </a>
+</p>
