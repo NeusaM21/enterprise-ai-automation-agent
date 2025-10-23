@@ -1,44 +1,43 @@
-<!-- Banner -->
-<p align="center">
-  <img src="assets/banner.png" alt="Enterprise AI Automation Agent Banner" style="max-width: 100%;">
-</p>
+# <img src="assets/banner.png" alt="Enterprise AI Automation Agent Banner"/>
 
-# Enterprise AI Automation Agent – WhatsApp + Shopify + Google Gemini AI
-**AI automation backend integrating WhatsApp + Shopify + Google Gemini AI for ecommerce automation, product assistance and intelligent conversations.**  
+# **Enterprise AI Automation Agent – WhatsApp + Shopify + Google Gemini AI**
+**AI automation backend integrating WhatsApp + Shopify + Google Gemini AI for ecommerce automation, product assistance, and intelligent conversations.**
 
-![Status](https://img.shields.io/badge/status-active-success)
-![Python](https://img.shields.io/badge/python-3.11+-blue)
-![FastAPI](https://img.shields.io/badge/FastAPI-Ready-brightgreen)
-![Gemini AI](https://img.shields.io/badge/Google%20Gemini-Integrated-black)
-![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20Linux-blue)
-![License](https://img.shields.io/badge/license-MIT-purple)
+![status: active](https://img.shields.io/badge/status-active-brightgreen)
+![python](https://img.shields.io/badge/python-3.11+-blue)
+![FastAPI](https://img.shields.io/badge/FastAPI-ready-teal)
+![Gemini](https://img.shields.io/badge/Google-Gemini-orange)
+![Integrated](https://img.shields.io/badge/platform-Windows%20|%20Linux-lightgrey)
+![MIT](https://img.shields.io/badge/license-MIT-purple)
 
 <hr style="border: 0.5px solid #e5e5e5; margin: 20px 0">
 
-## 📑 Table of Contents
-- [✅ Feature Overview](#feature-overview)
-- [⚙️ Tech Stack](#tech-stack)
-- [🔧 How It Works](#how-it-works)
-- [🚀 Local Setup](#local-setup)
-- [🔐 Environment (.env)](#environment-env)
-- [▶️ Run Server](#run-server)
-- [⚡ Canonical API Tests (PowerShell)](#canonical-api-tests-powershell)
-- [✅ Expected Response](#expected-response)
-- [🔥 Demo (Terminal)](#demo-terminal)
-- [🛒 Shopify Example](#shopify-example)
-- [💬 WhatsApp Webhook](#whatsapp-webhook)
-- [📂 Project Structure](#project-structure)
-- [🛠️ Troubleshooting](#troubleshooting)
-- [🌍 Links Oficiais](#links-oficiais)
-- [🇧🇷 Visão Geral (Português)](#visão-geral-português)
-- [🧭 Roadmap](#roadmap)
-- [👩‍💻 Author](#author)
-- [📄 License](#license)
+## 🧭 Table of Contents
+- [✅ Feature Overview](#-feature-overview)
+- [🧰 Tech Stack](#-tech-stack)
+- [⚙️ How It Works](#️-how-it-works)
+- [💻 Local Setup](#-local-setup)
+- [🔐 Environment (.env)](#-environment-env)
+- [▶️ Run Server](#️-run-server)
+- [⚡ Canonical API Tests (PowerShell)](#-canonical-api-tests-powershell)
+- [📤 Expected Response](#-expected-response)
+- [🔥 Demo (Terminal)](#-demo-terminal)
+- [🛒 Shopify Example](#-shopify-example)
+- [💬 WhatsApp Webhook](#-whatsapp-webhook)
+- [📂 Project Structure](#-project-structure-clean-architecture-ready)
+- [🧩 Troubleshooting](#-troubleshooting)
+- [🧾 Common Errors Table](#-common-errors-table)
+- [🌐 Official Links](#-official-links)
+- [🇺🇸 Global Overview (English)](#-global-overview-english)
+- [🇧🇷 Visão Geral (Português)](#-visão-geral-português)
+- [🗺️ Roadmap](#-roadmap)
+- [👩‍💻 Author](#-author)
+- [📜 License](#-license)
 
 <hr style="border: 0.5px solid #e5e5e5; margin: 20px 0">
 
-<a id="feature-overview"></a>
 ## ✅ Feature Overview
+
 | Feature | Status | Description |
 |----------|--------|-------------|
 | AI Reply Engine (Gemini) | ✅ Done | Smart responses powered by Google Gemini |
@@ -46,28 +45,33 @@
 | Shopify Integration | ✅ Done | Product search by title |
 | Error-safe AI Engine | ✅ Done | Timeout + fallback + model validation |
 | REST API Docs | ✅ Done | Swagger ready |
-| Slack Notifications | 🔜 Next | Team alerts from automation |
-| AI Memory (/ai/messages) | 🔜 Next | Conversation history |
-| Ecommerce AI Assistant | 🔜 Next | Smart product advisor |
-| RAG for Knowledge Base | 🔜 Planned | Load product FAQ / docs |
-| Dashboard UI | 🔜 Planned | Manage flows visually |
+| Slack Notifications | 🚧 Next | Team alerts from automation |
+| AI Memory (/ai/messages) | 🚧 Next | Conversation history |
+| Ecommerce AI Assistant | 🚧 Next | Smart product advisor |
+| RAG for Knowledge Base | 🚧 Planned | Load product FAQ / docs |
+| Dashboard UI | 🚧 Planned | Manage flows visually |
 
 <hr style="border: 0.5px solid #e5e5e5; margin: 20px 0">
 
-<a id="tech-stack"></a>
-## ⚙️ Tech Stack
+## 🧰 Tech Stack
+
 | Area | Technology |
 |------|-------------|
-| Language | Python 3.11 |
+| Language | Python 3.11+ |
 | Framework | FastAPI |
 | AI Provider | Google Gemini |
 | Ecommerce | Shopify API |
 | Messaging | WhatsApp Cloud API |
 | HTTP Client | httpx |
 | ASGI Server | uvicorn |
-| Env | python-dotenv |
+| Environment | python-dotenv |
 
 <hr style="border: 0.5px solid #e5e5e5; margin: 20px 0">
+
+## ⚙️ How It Works
+
+**Flow logic:**
+
 
 <a id="how-it-works"></a>
 ## 🔧 How It Works
@@ -77,34 +81,35 @@ User (WhatsApp) → Webhook → Check Shopify Products
 
 <hr style="border: 0.5px solid #e5e5e5; margin: 20px 0">
 
-<a id="local-setup"></a>
-## 🚀 Local Setup
-1. Clone o repositório:  
-`git clone https://github.com/NeusaM21/enterprise-ai-automation-agent.git`  
-2. Acesse a pasta do projeto:  
-`cd enterprise-ai-automation-agent`  
-3. Crie o ambiente virtual:  
-`python -m venv .venv`  
-4. Ative no PowerShell:  
-`& .\.venv\Scripts\Activate.ps1`  
-5. Instale dependências:  
-`pip install -r requirements.txt`  
+## 💻 Local Setup
+
+1. Clone the repository:  
+   ```bash
+   git clone https://github.com/NeusaM21/enterprise-ai-automation-agent.git
+2. Enter the project folder: 
+cd enterprise-ai-automation-agent
+3. Create a virtual environment:  
+python -m venv .venv 
+4. Activate (PowerShell):  
+.\.venv\Scripts\Activate.ps1
+5. Install dependencies:
+pip install -r requirements.txt 
+
+🧩 Note: Requires Python 3.11+
 
 <hr style="border: 0.5px solid #e5e5e5; margin: 20px 0">
 
 <a id="environment-env"></a>
+
 ## 🔐 Environment (.env)
 
-Crie um arquivo `.env` na raiz do projeto com:  
-
-Create a .env file:
-
+Create a .env file in the project root:
 
 ENV=dev
 HOST=127.0.0.1
 PORT=8000
 
-GEMINI_API_KEY=YOUR_GEMINI_KEY
+GEMINI_API_KEY=your_gemini_key
 AI_MODEL=models/gemini-2.0-flash-001
 
 SHOPIFY_API_KEY=your_key
@@ -119,26 +124,32 @@ WHATSAPP_PHONE_ID=your_whatsapp_phone_id
 <hr style="border: 0.5px solid #e5e5e5; margin: 20px 0">
 
 <a id="run-server"></a>
+
 ## ▶️ Run Server
-Execute o servidor local:  
-`uvicorn app.main:app --host 127.0.0.1 --port 8000 --reload`  
-Acesse a documentação Swagger:  
-[http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
+
+Run locally:
+uvicorn app.main:app --host 127.0.0.1 --port 8000 --reload
+Access the Swagger documentation:
+👉 http://127.0.0.1:8000/docs
 
 <hr style="border: 0.5px solid #e5e5e5; margin: 20px 0">
 
 <a id="canonical-api-tests-powershell"></a>
-## ⚡ Canonical API Tests (PowerShell)
-Antes de testar, confirme se o servidor FastAPI está rodando!  
-Se não estiver:
-- Pressione **CTRL + C** para parar o servidor antigo.  
-- Ative a venv: `& .\.venv\Scripts\Activate.ps1`  
-- Inicie com: `./run.ps1`  
 
-Testes:
+## ⚡ Canonical API Tests (PowerShell)
+
+Before testing, make sure the FastAPI server is running.
+If not:
+
+- Press CTRL + C to stop the previous session.
+- Activate venv: & .\.venv\Scripts\Activate.ps1
+- Run: ./run.ps1 
+
+Example tests
 
 Invoke-RestMethod -Method Get -Uri "http://127.0.0.1:8000/health"
 Invoke-RestMethod -Method Get -Uri "http://127.0.0.1:8000/ai/models"
+
 $body = @{ text = "Hello Gemini, how are you?" } | ConvertTo-Json
 Invoke-RestMethod -Method Post -Uri "http://127.0.0.1:8000/ai/ask" -ContentType "application/json" -Body $body
 
@@ -147,7 +158,8 @@ Invoke-RestMethod -Method Post -Uri "http://127.0.0.1:8000/ai/ask" -ContentType 
 
 
 <a id="expected-response"></a>
-## ✅ Expected Response
+
+📤 Expected Response
 
 {
   "model": "models/gemini-2.5-flash",
@@ -156,11 +168,14 @@ Invoke-RestMethod -Method Post -Uri "http://127.0.0.1:8000/ai/ask" -ContentType 
   "reply": "Hi! I'm great and ready to help! 😊"
 }
 
+🧠 Tip: Add timeout_ms to handle slow responses and avoid retries.
+
 
 <hr style="border: 0.5px solid #e5e5e5; margin: 20px 0;">
 
 
 <a id="demo-terminal"></a>
+
 ## 🔥 Demo (Terminal)
 
 curl -X POST http://127.0.0.1:8000/ai/ask \
@@ -172,6 +187,7 @@ curl -X POST http://127.0.0.1:8000/ai/ask \
 
 
 <a id="shopify-example"></a>
+
 ## 🛒 Shopify Example
 
 GET http://127.0.0.1:8000/catalog/products?limit=5
@@ -181,6 +197,7 @@ GET http://127.0.0.1:8000/catalog/products?limit=5
 
 
 <a id="whatsapp-webhook"></a>
+
 ## 💬 WhatsApp Webhook
 
 GET /webhook/whatsapp?hub.mode=subscribe&hub.verify_token=YOUR_TOKEN&hub.challenge=1234
@@ -195,10 +212,11 @@ POST /webhook/whatsapp
 
 
 <a id="project-structure"></a>
+
 ## 📂 Project Structure (Clean Architecture Ready)
 
 ```plaintext
-This project follows a modular and scalable architecture to support future extensions such as conversation memory, Slack actions, RAG knowledge base, and persistent storage. The structure is clean and organized to make maintenance easy.
+This project follows a modular and scalable architecture prepared for future extensions such as conversation memory, Slack actions, RAG knowledge base, and persistent storage.
 
 Este projeto segue uma arquitetura modular e escalável, preparada para receber expansões futuras como memória conversacional, ações via Slack, RAG para base de conhecimento e persistência de dados. A organização facilita manutenção e evolução.
 
@@ -226,80 +244,115 @@ enterprise-ai-automation-agent
 
 
 <a id="troubleshooting"></a>
-## 🛠️ Troubleshooting
+
+🧩 Troubleshooting
+
 Issue	Fix
-Connection refused	Start server: ./run.ps1
+Connection refused	Run server with ./run.ps1
 Model not found	Check /ai/models and .env
 Timeout	Add timeout_ms to /ai/ask body
-AI error 502	Check GEMINI_API_KEY
-CRLF/LF warning	Already fixed with .gitattributes
+502 AI error	Verify GEMINI_API_KEY
+CRLF/LF warning	Fixed with .gitattributes
 
 <hr style="border: 0.5px solid #e5e5e5; margin: 20px 0;">
+
+🧾 Common Errors Table
+
+Error	Possible Cause	Quick Fix
+502 Bad Gateway	Invalid or missing GEMINI_API_KEY	Check .env and restart
+TimeoutError	Slow AI response	Add timeout_ms parameter
+Model Not Found	Wrong model name	Use /ai/models endpoint
+Connection Refused	Server not running	Execute ./run.ps1
+CRLF/LF Warning	Windows line endings	Ensure .gitattributes set to LF
 
 
 <a id="links-oficiais"></a>
-## 🌍 Links Oficiais
 
-Gemini AI Docs → https://ai.google.dev
+## 🌐 Official Links
 
-WhatsApp API → https://developers.facebook.com
+Gemini AI Docs
 
-Shopify API → https://shopify.dev
+WhatsApp API
 
+Shopify API
+
+MIT License
 
 <hr style="border: 0.5px solid #e5e5e5; margin: 20px 0;">
 
+🇺🇸 Global Overview (English)
+
+This project is an AI-powered automation agent for ecommerce that connects:
+
+🟢 WhatsApp — AI-driven customer interactions
+
+🟣 Shopify — Product search and management
+
+🔵 Gemini AI — Smart reasoning and adaptive replies
+
+You can automate customer service, sales flows, and smart chat responses using this system.
+
+
+<hr style="border: 0.5px solid #e5e5e5; margin: 20px 0">
+
 
 <a id="visão-geral-português"></a>
-## 🇧🇷 Visão Geral (Português)
 
-Este projeto é um agente de automação com IA para e-commerce. Ele integra:
-✅ WhatsApp (atendimento automático)
-✅ Shopify (busca de produtos)
-✅ IA (Gemini) para respostas inteligentes
+🇧🇷 Visão Geral (Português)
 
-Use para criar automações reais de suporte, vendas e chat com IA.
+Este projeto é um agente de automação com IA para e-commerce.
+Ele integra:
+
+🟢 WhatsApp – Atendimento automático com IA
+
+🟣 Shopify – Busca e recomendação de produtos
+
+🔵 Gemini AI – Respostas inteligentes e contexto conversacional
+
+Use para criar automações reais de suporte, vendas e chat inteligente.
 
 
 <hr style="border: 0.5px solid #e5e5e5; margin: 20px 0;">
 
 
 <a id="roadmap"></a>
-## 🧭 Roadmap
 
-Slack alerts ✅ soon
+🗺️ Roadmap
 
-AI conversation memory
+✅ Slack alerts (soon)
 
-RAG for store FAQ
+🚧 AI conversation memory
 
-Product recommendations
+🚧 RAG for store FAQ
 
-Web dashboard
+🚧 Product recommendations
+
+🚧 Web dashboard (visual builder)
 
 
 <hr style="border: 0.5px solid #e5e5e5; margin: 20px 0;">
 
 
 <a id="author"></a>
-## 👩‍💻 Author
 
-Developed by Neusa M. – AI Automation Engineer
+👩‍💻 Author
 
-📩 Email: contact.neusam21@gmail.com
+Developed by Neusa M. — AI Automation Engineer
 
-🌐 GitHub: https://github.com/NeusaM21
-
-🔗 LinkedIn: www.linkedin.com/in/NeusaM21
+📧 [contact.neusam21@gmail.com](mailto:contact.neusam21@gmail.com)  
+💻 [github.com/NeusaM21](https://github.com/NeusaM21)  
+🌐 [linkedin.com/in/NeusaM21](https://www.linkedin.com/in/NeusaM21)
 
 
 <hr style="border: 0.5px solid #e5e5e5; margin: 20px 0;">
 
 
 <a id="license"></a>
-## 📄 License
 
-This project is licensed under the [MIT License](LICENSE) — free for commercial and academic use.
+📜 License
+
+This project is licensed under the MIT License
+ — free for commercial and academic use.
 
 
 ---
