@@ -21,10 +21,10 @@
 - [▶️ Run Server](#️-run-server)
 - [⚡ Canonical API Tests (PowerShell)](#-canonical-api-tests-powershell)
 - [📤 Expected Response](#-expected-response)
-- [🔥 Demo (Terminal)](#-demo-terminal)
-- [🛒 Shopify Example](#-shopify-example)
-- [💬 WhatsApp Webhook](#-whatsapp-webhook)
-- [📂 Project Structure](#-project-structure-clean-architecture-ready)
+- [🔥 Demo (Terminal)](#demo-terminal)
+- [🛒 Shopify Example](#shopify-example)
+- [💬 WhatsApp Webhook](#whatsapp-webhook)
+- [📂 Project Structure](#project-structure)
 - [🧩 Troubleshooting](#-troubleshooting)
 - [🧾 Common Errors Table](#-common-errors-table)
 - [🌐 Official Links](#-official-links)
@@ -174,72 +174,58 @@ Invoke-RestMethod -Method Post -Uri "http://127.0.0.1:8000/ai/ask" -ContentType 
 
 
 <a id="demo-terminal"></a>
-
 ## 🔥 Demo (Terminal)
 
+```bash
 curl -X POST http://127.0.0.1:8000/ai/ask \
   -H "Content-Type: application/json" \
   -d "{\"text\":\"Say one fun fact about AI\"}"
 
-
-<hr style="border: 0.5px solid #e5e5e5; margin: 20px 0;">
+<hr style="border: 0.5px solid #e5e5e5; margin: 20px 0;"> ```
 
 
 <a id="shopify-example"></a>
-
 ## 🛒 Shopify Example
 
 GET http://127.0.0.1:8000/catalog/products?limit=5
-
 
 <hr style="border: 0.5px solid #e5e5e5; margin: 20px 0;">
 
 
 <a id="whatsapp-webhook"></a>
-
 ## 💬 WhatsApp Webhook
 
 GET /webhook/whatsapp?hub.mode=subscribe&hub.verify_token=YOUR_TOKEN&hub.challenge=1234
 
-
-Receive:
-
+Receive:  
 POST /webhook/whatsapp
-
 
 <hr style="border: 0.5px solid #e5e5e5; margin: 20px 0;">
 
 
 <a id="project-structure"></a>
-
 ## 📂 Project Structure (Clean Architecture Ready)
 
-```plaintext
-This project follows a modular and scalable architecture prepared for future extensions such as conversation memory, Slack actions, RAG knowledge base, and persistent storage.
-
-Este projeto segue uma arquitetura modular e escalável, preparada para receber expansões futuras como memória conversacional, ações via Slack, RAG para base de conhecimento e persistência de dados. A organização facilita manutenção e evolução.
+This project follows a modular and scalable architecture to support future extensions such as conversation memory, Slack actions, RAG knowledge base, and persistent storage.  
+The structure is clean and organized to make maintenance easy.
 
 ```plaintext
 enterprise-ai-automation-agent
 ├─ app/
-│  ├─ main.py                # FastAPI app and route definitions / App FastAPI e rotas
-│  ├─ services/              # External integrations: AI, Shopify, WhatsApp / Integrações externas
-│  ├─ utils/                 # Logger and shared helpers / Utilitários e logger
-│  ├─ config/                # Environment and global settings / Configuração e variáveis de ambiente
+│  ├─ main.py                # FastAPI app and route definitions
+│  ├─ services/              # External integrations: AI, Shopify, WhatsApp
+│  ├─ utils/                 # Logger and shared helpers
+│  ├─ config/                # Environment and global settings
 │
-├─ tests/                    # Automated tests / Testes automatizados
-│
-├─ assets/                   # Static project assets (images/banners) / Arquivos estáticos do projeto
-│  └─ banner.png             # Project cover image used in README / Imagem de capa
+├─ tests/                    # Automated tests
+├─ assets/                   # Static project assets (images/banners)
+│  └─ banner.png             # Project cover image used in README
 │
 ├─ run.ps1                   # Local startup script for Windows PowerShell
 ├─ requirements.txt          # Python dependencies
 └─ README.md                 # Project documentation
 
-```
-
-
-<hr style="border: 0.5px solid #e5e5e5; margin: 20px 0;">
+<hr style="border: 0.5px solid #e5e5e5; margin: 20px 0;"> ```
 
 
 <a id="troubleshooting"></a>
