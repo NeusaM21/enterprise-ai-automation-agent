@@ -28,10 +28,10 @@
 - [🧩 Troubleshooting](#-troubleshooting)
 - [🧾 Common Errors Table](#-common-errors-table)
 - [🌐 Official Links](#-official-links)
-- [🇺🇸 Global Overview (English)](#-global-overview-english)
-- [🇧🇷 Visão Geral (Português)](#-visão-geral-português)
-- [🗺️ Roadmap](#-roadmap)
-- [👩‍💻 Author](#-author)
+- [🇺🇸 Global Overview (English)](#global-overview-english)
+- [🇧🇷 Visão Geral (Português)](#global-overview-portuguese)
+- [🗺️ Roadmap](#roadmap)
+- [👩‍💻 Author](#author)
 - [📜 License](#-license)
 
 <hr style="border: 0.5px solid #e5e5e5; margin: 20px 0">
@@ -71,14 +71,13 @@
 
 
 <a id="how-it-works"></a>
-
-## 🔧 How It Works
+## ⚙️ How It Works
 
 User (WhatsApp) → Webhook → Check Shopify Products  
 ↳ Found → Product response to user  
-↳ Not Found → Ask Gemini AI → Smart reply to WhatsApp
+↳ Not Found → Ask Gemini AI → Smart reply to WhatsApp  
 
-<hr style="border: 0.5px solid #e5e5e5; margin: 20px 0">
+<hr style="border: 0.5px solid #e5e5e5; margin: 20px 0;">
 
 
 ## 💻 Local Setup
@@ -159,8 +158,9 @@ Invoke-RestMethod -Method Post -Uri "http://127.0.0.1:8000/ai/ask" -ContentType 
 
 <a id="expected-response"></a>
 
-📤 Expected Response
+## 📤 Expected Response
 
+```json
 {
   "model": "models/gemini-2.5-flash",
   "fallback": false,
@@ -168,10 +168,9 @@ Invoke-RestMethod -Method Post -Uri "http://127.0.0.1:8000/ai/ask" -ContentType 
   "reply": "Hi! I'm great and ready to help! 😊"
 }
 
-🧠 Tip: Add timeout_ms to handle slow responses and avoid retries.
+💡 Tip: Add timeout_ms to handle slow responses and avoid retries.
 
-
-<hr style="border: 0.5px solid #e5e5e5; margin: 20px 0;">
+<hr style="border: 0.5px solid #e5e5e5; margin: 20px 0;"> ```
 
 
 <a id="demo-terminal"></a>
@@ -244,28 +243,31 @@ enterprise-ai-automation-agent
 
 
 <a id="troubleshooting"></a>
+## 🧩 Troubleshooting
 
-🧩 Troubleshooting
-
-Issue	Fix
-Connection refused	Run server with ./run.ps1
-Model not found	Check /ai/models and .env
-Timeout	Add timeout_ms to /ai/ask body
-502 AI error	Verify GEMINI_API_KEY
-CRLF/LF warning	Fixed with .gitattributes
+Issue | Fix  
+------|------  
+Connection refused | Start server: `./run.ps1`  
+Model not found | Check `/ai/models` and `.env`  
+Timeout | Add `timeout_ms` to `/ai/ask` body  
+502 Error | Verify `GEMINI_API_KEY`  
+CRLF/LF warning | Fixed with `.gitattributes`
 
 <hr style="border: 0.5px solid #e5e5e5; margin: 20px 0;">
 
-<a id="common-errors-table">
 
-🧾 Common Errors Table
+<a id="common-errors-table"></a>
+## 🧾 Common Errors Table
 
-Error	Possible Cause	Quick Fix
-502 Bad Gateway	Invalid or missing GEMINI_API_KEY	Check .env and restart
-TimeoutError	Slow AI response	Add timeout_ms parameter
-Model Not Found	Wrong model name	Use /ai/models endpoint
-Connection Refused	Server not running	Execute ./run.ps1
-CRLF/LF Warning	Windows line endings	Ensure .gitattributes set to LF
+Error | Possible Cause | Quick Fix  
+------|----------------|-----------  
+502 Bad Gateway | Invalid or missing `GEMINI_API_KEY` | Check `.env` and restart  
+TimeoutError | Slow AI response | Add `timeout_ms` parameter  
+Model Not Found | Wrong model name | Use `/ai/models` endpoint  
+Connection Refused | Server not running | Execute `./run.ps1`  
+CRLF/LF Warning | Windows line endings | Ensure `.gitattributes` set to LF  
+
+<hr style="border: 0.5px solid #e5e5e5; margin: 20px 0;">
 
 
 <a id="links-oficiais"></a>
@@ -283,71 +285,54 @@ MIT License
 <hr style="border: 0.5px solid #e5e5e5; margin: 20px 0;">
 
 
-<a id="visão-geral-português">
+<a id="global-overview-english"></a>
+## 🇺🇸 Global Overview (English)
 
-🇺🇸 Global Overview (English)
+This project is an AI-powered automation agent for e-commerce that connects:
 
-This project is an AI-powered automation agent for ecommerce that connects:
+🟢 **WhatsApp** → AI-driven customer interactions  
+🟢 **Shopify** → Product search and management  
+🟢 **Gemini AI** → Smart reasoning and adaptive replies  
 
-🟢 WhatsApp — AI-driven customer interactions
+You can automate customer service, sales flows, and chat responses using this system.
 
-🟣 Shopify — Product search and management
-
-🔵 Gemini AI — Smart reasoning and adaptive replies
-
-You can automate customer service, sales flows, and smart chat responses using this system.
-
-
-<hr style="border: 0.5px solid #e5e5e5; margin: 20px 0">
+<hr style="border: 0.5px solid #e5e5e5; margin: 20px 0;">
 
 
-<a id="visão-geral-português">
+<a id="global-overview-portuguese"></a>
+## 🇧🇷 Visão Geral (Português)
 
-🇧🇷 Visão Geral (Português)
+Este projeto é um agente de automação com IA para e-commerce. Ele integra:
 
-Este projeto é um agente de automação com IA para e-commerce.
-Ele integra:
-
-🟢 WhatsApp – Atendimento automático com IA
-
-🟣 Shopify – Busca e recomendação de produtos
-
-🔵 Gemini AI – Respostas inteligentes e contexto conversacional
+🟢 **WhatsApp** → Atendimento automático com IA  
+🟢 **Shopify** → Busca e recomendação de produtos  
+🟢 **Gemini AI** → Respostas inteligentes e contexto conversacional  
 
 Use para criar automações reais de suporte, vendas e chat inteligente.
-
 
 <hr style="border: 0.5px solid #e5e5e5; margin: 20px 0;">
 
 
 <a id="roadmap"></a>
+## 🗺️ Roadmap
 
-🗺️ Roadmap
-
-✅ Slack alerts (soon)
-
-🚧 AI conversation memory
-
-🚧 RAG for store FAQ
-
-🚧 Product recommendations
-
-🚧 Web dashboard (visual builder)
-
+✅ Slack alerts (soon)  
+✅ AI conversation memory  
+✅ RAG for store FAQ  
+✅ Product recommendations  
+✅ Web dashboard (visual builder)
 
 <hr style="border: 0.5px solid #e5e5e5; margin: 20px 0;">
 
 
 <a id="author"></a>
+## 👩‍💻 Author
 
-👩‍💻 Author
-
-Developed by Neusa M. — AI Automation Engineer
+Developed by **Neusa M. — AI Automation Engineer**  
 
 📧 [contact.neusam21@gmail.com](mailto:contact.neusam21@gmail.com)  
 💻 [github.com/NeusaM21](https://github.com/NeusaM21)  
 🌐 [linkedin.com/in/NeusaM21](https://www.linkedin.com/in/NeusaM21)
-
 
 <hr style="border: 0.5px solid #e5e5e5; margin: 20px 0;">
 
