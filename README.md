@@ -1,16 +1,25 @@
 <p align="center"><img src="assets/enterprise-ai.png" alt="Enterprise AI Automation Agent Banner" width="100%"></p>
-# **Enterprise AI Automation Agent – WhatsApp + Shopify + Google Gemini AI**
-**AI automation backend integrating WhatsApp + Shopify + Google Gemini AI for ecommerce automation, product assistance, and intelligent conversations.**
 
+<hr style="border:0.5px solid #e5e5e5;margin:20px 0;">
 
-![status: active](https://img.shields.io/badge/status-active-brightgreen)
-![python](https://img.shields.io/badge/python-3.11+-blue)
-![FastAPI](https://img.shields.io/badge/FastAPI-ready-teal)
-![Gemini](https://img.shields.io/badge/Google-Gemini-orange)
-![Integrated](https://img.shields.io/badge/platform-Windows%20|%20Linux-lightgrey)
-![MIT](https://img.shields.io/badge/license-MIT-purple)
+<h2 align="center"><b>Enterprise AI Automation Agent</b></h2>
 
-<hr style="border: 0.5px solid #e5e5e5; margin: 20px 0">
+<p align="center">
+  <b>WhatsApp + Shopify + Google Gemini AI</b><br>
+  AI automation backend that connects <b>WhatsApp</b>, <b>Shopify</b>, and <b>Google Gemini</b> for e-commerce automation,<br>
+  smart product assistance and intelligent conversations.
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/status-active-brightgreen" alt="status active"/>
+  <img src="https://img.shields.io/badge/python-3.11+-blue" alt="Python version 3.11+"/>
+  <img src="https://img.shields.io/badge/FastAPI-ready-teal" alt="FastAPI ready"/>
+  <img src="https://img.shields.io/badge/Google-Gemini-orange" alt="Google Gemini"/>
+  <img src="https://img.shields.io/badge/platform-Windows%20|%20Linux-lightgrey" alt="Supported platforms"/>
+  <img src="https://img.shields.io/badge/license-MIT-purple" alt="MIT license"/>
+</p>
+
+<hr style="border:0.5px solid #e5e5e5;margin:20px 0;">
 
 ## 🧭 Table of Contents
 - [✅ Feature Overview](#-feature-overview)
