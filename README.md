@@ -4,10 +4,11 @@
 
 <hr style="border:0.5px solid #e5e5e5;margin:20px 0;">
 
+<h2 align="center">🚀 <b>AI Automation for the Modern Enterprise</b></h2>
+
 <p align="center">
-  <b>💡 AI Automation for the Modern Enterprise</b><br>
-  Seamlessly integrate <b>WhatsApp</b>, <b>Shopify</b>, and <b>Google Gemini AI</b> to power<br>
-  intelligent conversations, automated support, and smart e-commerce operations.
+  <i>Integrating <b>WhatsApp</b>, <b>Shopify</b>, and <b>Google Gemini AI</b> for next-generation automation,<br>
+  intelligent conversations, and seamless e-commerce experiences.</i>
 </p>
 
 <p align="center">
