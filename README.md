@@ -1,9 +1,7 @@
-<p align="center">
-  <img src="assets/enterprise-ai.png" alt="Enterprise AI Automation Agent Banner" width="100%">
-</p>
-
+<p align="center"><img src="assets/enterprise-ai.png" alt="Enterprise AI Automation Agent Banner" width="100%"></p>
 # **Enterprise AI Automation Agent – WhatsApp + Shopify + Google Gemini AI**
 **AI automation backend integrating WhatsApp + Shopify + Google Gemini AI for ecommerce automation, product assistance, and intelligent conversations.**
+
 
 ![status: active](https://img.shields.io/badge/status-active-brightgreen)
 ![python](https://img.shields.io/badge/python-3.11+-blue)
