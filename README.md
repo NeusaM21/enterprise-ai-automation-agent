@@ -15,24 +15,24 @@
 ## 🧭 Table of Contents
 - [✅ Feature Overview](#-feature-overview)
 - [🧰 Tech Stack](#-tech-stack)
-- [⚙️ How It Works](#️-how-it-works)
-- [💻 Local Setup](#-local-setup)
-- [🔐 Environment (.env)](#-environment-env)
-- [▶️ Run Server](#️-run-server)
-- [⚡ Canonical API Tests (PowerShell)](#-canonical-api-tests-powershell)
-- [📤 Expected Response](#-expected-response)
+- [⚙️ How It Works](#how-it-works)
+- [💻 Local Setup](#local-setup)
+- [🔐 Environment (.env)](#environment-env)
+- [▶️ Run Server](#run-server)
+- [⚡ Canonical API Tests (PowerShell)](#canonical-api-tests-powershell)
+- [📤 Expected Response](#expected-response)
 - [🔥 Demo (Terminal)](#demo-terminal)
 - [🛒 Shopify Example](#shopify-example)
 - [💬 WhatsApp Webhook](#whatsapp-webhook)
 - [📂 Project Structure](#project-structure)
-- [🧩 Troubleshooting](#-troubleshooting)
-- [🧾 Common Errors Table](#-common-errors-table)
-- [🌐 Official Links](#-official-links)
+- [🧩 Troubleshooting](#troubleshooting)
+- [🧾 Common Errors Table](#common-errors-table)
+- [🌐 Official Links](#official-links)
 - [🇺🇸 Global Overview (English)](#global-overview-english)
 - [🇧🇷 Visão Geral (Português)](#global-overview-portuguese)
 - [🗺️ Roadmap](#roadmap)
 - [👩‍💻 Author](#author)
-- [📜 License](#-license)
+- [📜 License](#license)
 
 <hr style="border: 0.5px solid #e5e5e5; margin: 20px 0">
 
@@ -66,22 +66,18 @@
 | ASGI Server | uvicorn |
 | Environment | python-dotenv |
 
-
 <hr style="border: 0.5px solid #e5e5e5; margin: 20px 0">
-
 
 <a id="how-it-works"></a>
 ## ⚙️ How It Works
-
 User (WhatsApp) → Webhook → Check Shopify Products  
 ↳ Found → Product response to user  
 ↳ Not Found → Ask Gemini AI → Smart reply to WhatsApp  
 
-<hr style="border: 0.5px solid #e5e5e5; margin: 20px 0;">
+<hr style="border: 0.5px solid #e5e5e5; margin: 20px 0">
 
-
+<a id="local-setup"></a>
 ## 💻 Local Setup
-
 1. Clone the repository:  
    ```bash
    git clone https://github.com/NeusaM21/enterprise-ai-automation-agent.git
@@ -167,24 +163,28 @@ Invoke-RestMethod -Method Post -Uri "http://127.0.0.1:8000/ai/ask" -ContentType 
   "latency_ms": 210,
   "reply": "Hi! I'm great and ready to help! 😊"
 }
+```
 
-💡 Tip: Add timeout_ms to handle slow responses and avoid retries.
+💡 Tip: Add `timeout_ms` to handle slow responses and avoid retries.
 
-<hr style="border: 0.5px solid #e5e5e5; margin: 20px 0;"> ```
+<hr style="border: 0.5px solid #e5e5e5; margin: 20px 0">
 
 
 <a id="demo-terminal"></a>
+
 ## 🔥 Demo (Terminal)
 
 ```bash
 curl -X POST http://127.0.0.1:8000/ai/ask \
   -H "Content-Type: application/json" \
   -d "{\"text\":\"Say one fun fact about AI\"}"
+```
 
-<hr style="border: 0.5px solid #e5e5e5; margin: 20px 0;"> ```
+<hr style="border: 0.5px solid #e5e5e5; margin: 20px 0;">
 
 
 <a id="shopify-example"></a>
+
 ## 🛒 Shopify Example
 
 GET http://127.0.0.1:8000/catalog/products?limit=5
@@ -193,6 +193,7 @@ GET http://127.0.0.1:8000/catalog/products?limit=5
 
 
 <a id="whatsapp-webhook"></a>
+
 ## 💬 WhatsApp Webhook
 
 GET /webhook/whatsapp?hub.mode=subscribe&hub.verify_token=YOUR_TOKEN&hub.challenge=1234
@@ -204,6 +205,7 @@ POST /webhook/whatsapp
 
 
 <a id="project-structure"></a>
+
 ## 📂 Project Structure (Clean Architecture Ready)
 
 This project follows a modular and scalable architecture to support future extensions such as conversation memory, Slack actions, RAG knowledge base, and persistent storage.  
@@ -224,11 +226,13 @@ enterprise-ai-automation-agent
 ├─ run.ps1                   # Local startup script for Windows PowerShell
 ├─ requirements.txt          # Python dependencies
 └─ README.md                 # Project documentation
+```
 
-<hr style="border: 0.5px solid #e5e5e5; margin: 20px 0;"> ```
+<hr style="border: 0.5px solid #e5e5e5; margin: 20px 0;">
 
 
 <a id="troubleshooting"></a>
+
 ## 🧩 Troubleshooting
 
 Issue | Fix  
@@ -243,6 +247,7 @@ CRLF/LF warning | Fixed with `.gitattributes`
 
 
 <a id="common-errors-table"></a>
+
 ## 🧾 Common Errors Table
 
 Error | Possible Cause | Quick Fix  
@@ -272,6 +277,7 @@ MIT License
 
 
 <a id="global-overview-english"></a>
+
 ## 🇺🇸 Global Overview (English)
 
 This project is an AI-powered automation agent for e-commerce that connects:
@@ -286,6 +292,7 @@ You can automate customer service, sales flows, and chat responses using this sy
 
 
 <a id="global-overview-portuguese"></a>
+
 ## 🇧🇷 Visão Geral (Português)
 
 Este projeto é um agente de automação com IA para e-commerce. Ele integra:
@@ -300,6 +307,7 @@ Use para criar automações reais de suporte, vendas e chat inteligente.
 
 
 <a id="roadmap"></a>
+
 ## 🗺️ Roadmap
 
 ✅ Slack alerts (soon)  
@@ -312,6 +320,7 @@ Use para criar automações reais de suporte, vendas e chat inteligente.
 
 
 <a id="author"></a>
+
 ## 👩‍💻 Author
 
 Developed by **Neusa M. — AI Automation Engineer**  
