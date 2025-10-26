@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/enterprise-ai.png" alt="Enterprise AI Automation Agent Banner" width="100%">
+  <img src="assets/banner.png" alt="Enterprise AI Automation Agent Banner" width="100%">
 </p>
 
 <hr style="border:0.5px solid #e5e5e5;margin:20px 0;">
