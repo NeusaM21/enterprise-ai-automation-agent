@@ -1,13 +1,13 @@
-<p align="center"><img src="assets/enterprise-ai.png" alt="Enterprise AI Automation Agent Banner" width="100%"></p>
+<p align="center">
+  <img src="assets/enterprise-ai.png" alt="Enterprise AI Automation Agent Banner" width="100%">
+</p>
 
 <hr style="border:0.5px solid #e5e5e5;margin:20px 0;">
 
-<h2 align="center"><b>Enterprise AI Automation Agent</b></h2>
-
 <p align="center">
-  <b>WhatsApp + Shopify + Google Gemini AI</b><br>
-  AI automation backend that connects <b>WhatsApp</b>, <b>Shopify</b>, and <b>Google Gemini</b> for e-commerce automation,<br>
-  smart product assistance and intelligent conversations.
+  <b>💡 AI Automation for the Modern Enterprise</b><br>
+  Seamlessly integrate <b>WhatsApp</b>, <b>Shopify</b>, and <b>Google Gemini AI</b> to power<br>
+  intelligent conversations, automated support, and smart e-commerce operations.
 </p>
 
 <p align="center">
