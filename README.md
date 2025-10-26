@@ -261,19 +261,17 @@ CRLF/LF Warning | Windows line endings | Ensure `.gitattributes` set to LF
 <hr style="border: 0.5px solid #e5e5e5; margin: 20px 0;">
 
 
-<a id="links-oficiais"></a>
+<a id="official-links"></a>
 
 ## 🌐 Official Links
 
-Gemini AI Docs
-
-WhatsApp API
-
-Shopify API
-
-MIT License
+- [Gemini AI Docs](https://ai.google.dev/)
+- [WhatsApp API](https://developers.facebook.com/docs/whatsapp/)
+- [Shopify API](https://shopify.dev/docs/api)
+- [MIT License](https://opensource.org/licenses/MIT)
 
 <hr style="border: 0.5px solid #e5e5e5; margin: 20px 0;">
+
 
 
 <a id="global-overview-english"></a>
