@@ -184,10 +184,25 @@ Invoke-RestMethod -Method Post -Uri "http://127.0.0.1:8000/ai/ask" -ContentType 
 
 ## 🔥 Demo (Terminal)
 
+See below the agent in action in the terminal with the **Gemini 1.5 Flash** model, processing a sample request 👇  
+
+![Demo](assets/demo-terminal.gif)
+
+**Command used for the test:**
+
 ```bash
 curl -X POST http://127.0.0.1:8000/ai/ask \
   -H "Content-Type: application/json" \
-  -d "{\"text\":\"Say one fun fact about AI\"}"
+  -d "{\"text\":\"Tell me one fun fact about artificial intelligence\"}"
+
+Expected response example:
+
+{
+  "model": "models/gemini-1.5-flash",
+  "fallback": false,
+  "latency_ms": 210,
+  "reply": "AI once helped discover a new antibiotic by analyzing molecular patterns faster than humans!"
+}
 ```
 
 <hr style="border: 0.5px solid #e5e5e5; margin: 20px 0;">
@@ -218,23 +233,28 @@ POST /webhook/whatsapp
 
 ## 📂 Project Structure (Clean Architecture Ready)
 
-This project follows a modular and scalable architecture to support future extensions such as conversation memory, Slack actions, RAG knowledge base, and persistent storage.  
-The structure is clean and organized to make maintenance easy.
+This project follows a modular and scalable architecture to support future extensions such as conversation memory, Slack actions, RAG knowledge base, and persistent storage. The structure is clean and organized to make maintenance easy.
 
 ```plaintext
 enterprise-ai-automation-agent
 ├─ app/
 │  ├─ main.py                # FastAPI app and route definitions
 │  ├─ services/              # External integrations: AI, Shopify, WhatsApp
+│  │  ├─ ai.py              # Integration with AI models
+│  │  ├─ gemini_client.py   # Handles Gemini AI model integration
+│  │  ├─ shopify.py         # Integration with Shopify API
+│  │  └─ whatsapp.py        # Integration with WhatsApp API
 │  ├─ utils/                 # Logger and shared helpers
 │  ├─ config/                # Environment and global settings
 │
 ├─ tests/                    # Automated tests
 ├─ assets/                   # Static project assets (images/banners)
-│  └─ banner.png             # Project cover image used in README
+│  ├─ banner.png             # Project cover image used in README
+│  └─ demo-terminal.gif      # Demo animation for terminal usage example
 │
 ├─ run.ps1                   # Local startup script for Windows PowerShell
 ├─ requirements.txt          # Python dependencies
+├─ LICENSE                   # Project license
 └─ README.md                 # Project documentation
 ```
 
