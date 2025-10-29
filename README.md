@@ -1,6 +1,5 @@
 <p align="center">
-  <img src="assets/banner.png" alt="Enterprise AI Automation Agent Banner" width<img width="1536" height="1024" alt="banner" src="https://github.com/user-attachments/assets/9fb628aa-ce73-4682-aa31-0c5336c95de5" />
-="100%">
+  <img width="100%" alt="Enterprise AI Automation Agent Banner" src="https://github.com/user-attachments/assets/9fb628aa-ce73-4682-aa31-0c5336c95de5" />
 </p>
 
 <hr style="border:0.5px solid #e5e5e5;margin:20px 0;">
@@ -187,8 +186,7 @@ Invoke-RestMethod -Method Post -Uri "http://127.0.0.1:8000/ai/ask" -ContentType 
 
 See below the agent in action in the terminal with the **Gemini 1.5 Flash** model, processing a sample request 👇  
 
-![Demo](assets/demo-ter![demo-terminal](https://github.com/user-attachments/assets/37de1092-91fd-4ae8-970c-30f2fcd8e568)
-minal.gif)
+![Demo Terminal](https://github.com/user-attachments/assets/37de1092-91fd-4ae8-970c-30f2fcd8e568)
 
 **Command used for the test:**
 
